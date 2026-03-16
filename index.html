@@ -8,19 +8,41 @@
     </head>
     <body>
         <header>
+            <div class="theme-toggle-container">
+                <button id="theme-toggle">Modo Escuro 🌙</button>
+            </div>
             <div class="container">
-                <h1>Flip Economics</h1>
-                <p>Girando a economia de ponta cabeça.</p>
+                <h1 id="main-title">Flip Economics</h1>
+                <p id="main-description">Girando a economia de ponta cabeça.</p>
+                <div class="welcome-container">
+                    <button id="welcome-btn">
+                        Clique para receber uma mensagem
+                    </button>
+                    <p id="welcome-message"></p>
+                </div>
+                <p
+                    id="section-message"
+                    style="margin-top: 10px; font-weight: bold"
+                ></p>
                 <nav>
-                    <a href="#sobre">Início</a>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#contato">Contato</a>
+                    <a href="#sobre" class="menu-link" data-section="Início"
+                        >Início</a
+                    >
+                    <a
+                        href="#servicos"
+                        class="menu-link"
+                        data-section="Serviços"
+                        >Serviços</a
+                    >
+                    <a href="#contato" class="menu-link" data-section="Contato"
+                        >Contato</a
+                    >
                 </nav>
             </div>
         </header>
 
         <main class="container">
-            <section id="sobre">
+            <section id="sobre" class="page-section">
                 <h2>Sobre a empresa</h2>
                 <article>
                     <p>
@@ -53,13 +75,16 @@
                     </p>
                 </article>
                 <img
-                    src="https://wallpapers.com/images/high/dollar-pictures-n0bp6xrzoahv2n6x.webp"
+                    id="hover-image"
+                    src="img/dollar.jpg"
                     alt="Dólares"
                     class="img-destaque"
+                    data-original-src="img/dollar.jpg"
+                    data-hover-src="img/euro.jpg"
                 />
             </section>
 
-            <section id="servicos">
+            <section id="servicos" class="page-section">
                 <h2>Serviços</h2>
                 <ul>
                     <li>Consultoria</li>
@@ -69,7 +94,7 @@
                 </ul>
             </section>
 
-            <section id="precos">
+            <section id="precos" class="page-section">
                 <h2>Preços de ações</h2>
                 <div class="table-container">
                     <table>
@@ -101,7 +126,7 @@
                 </div>
             </section>
 
-            <section id="video">
+            <section id="video" class="page-section">
                 <h2>Vídeo explicativo</h2>
                 <div class="video-wrapper">
                     <iframe
@@ -113,7 +138,38 @@
                 </div>
             </section>
 
-            <section id="contato">
+            <section id="interatividade" class="page-section">
+                <h2>Interatividade</h2>
+                <p id="text-to-change">Este é um site sobre tecnologia.</p>
+                <button
+                    id="change-text-btn"
+                    class="btn-submit"
+                    style="width: auto; margin-top: 15px"
+                >
+                    Alterar conteúdo
+                </button>
+                <button
+                    id="change-section-color-btn"
+                    class="btn-submit"
+                    style="width: auto; margin-top: 15px"
+                >
+                    Alterar cor da seção
+                </button>
+                <button
+                    id="toggle-content-btn"
+                    class="btn-submit"
+                    style="width: auto; margin-top: 15px"
+                >
+                    Mostrar mais informações
+                </button>
+                <p id="extra-content" style="display: none; margin-top: 15px">
+                    Aqui você encontra informações adicionais sobre a Flip
+                    Economics, nossa metodologia e como podemos impulsionar seus
+                    negócios.
+                </p>
+            </section>
+
+            <section id="contato" class="page-section">
                 <h2>Contato</h2>
                 <form action="#" class="contato-form">
                     <label for="fname">Nome:</label>
@@ -169,5 +225,6 @@
                 <p>&copy; 2026 Flip Economics. Todos os direitos reservados.</p>
             </div>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>

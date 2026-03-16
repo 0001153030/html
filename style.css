@@ -7,6 +7,14 @@
     --white: #ffffff;
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --section-bg: #ffffff;
+}
+
+body.dark-mode {
+    --text-color: #f4f7f6;
+    --bg-color: #121212;
+    --section-bg: #1e1e1e;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -20,6 +28,32 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+    transition:
+        background-color var(--transition),
+        color var(--transition);
+}
+
+.theme-toggle-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#theme-toggle {
+    background: var(--white);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.05);
 }
 
 .container {
@@ -38,6 +72,7 @@ header {
     padding: 40px 0;
     text-align: center;
     box-shadow: var(--shadow);
+    position: relative;
 }
 
 header h1 {
@@ -45,6 +80,36 @@ header h1 {
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.welcome-container {
+    margin: 20px 0;
+}
+
+#welcome-btn {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#welcome-btn:hover {
+    background-color: var(--white);
+    transform: translateY(-2px);
+}
+
+#welcome-message {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    min-height: 1.6em;
+    transition: var(--transition);
 }
 
 nav {
@@ -65,18 +130,23 @@ nav a {
     border-bottom: 2px solid transparent;
 }
 
+.menu-link {
+    cursor: pointer;
+}
+
 nav a:hover {
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
 }
 
 section {
-    background: var(--white);
+    background: var(--section-bg);
     margin: 40px 0;
     padding: 40px;
     border-radius: 12px;
     box-shadow: var(--shadow);
     border-left: 5px solid var(--primary-color);
+    transition: background-color var(--transition);
 }
 
 h2 {
@@ -86,6 +156,10 @@ h2 {
     border-bottom: 2px solid var(--accent-color);
     display: inline-block;
     padding-bottom: 5px;
+}
+
+body.dark-mode h2 {
+    color: var(--accent-color);
 }
 
 article p {
@@ -124,6 +198,10 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
+body.dark-mode td {
+    border-bottom: 1px solid #444;
+}
+
 th {
     background-color: var(--primary-color);
     color: var(--white);
@@ -148,6 +226,13 @@ th {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
+    background: var(--section-bg);
+    color: var(--text-color);
+}
+
+body.dark-mode .contato-form input,
+body.dark-mode .contato-form textarea {
+    border: 1px solid #444;
 }
 
 .btn-submit {
