@@ -183,3 +183,21 @@ consultarIpBtn.addEventListener("click", async () => {
       '<p style="color: red;">Erro ao buscar IP. Verifique sua conexão.</p>';
   }
 });
+
+// Clear buttons for API Consultations
+const limparCepBtn = document.getElementById("limparCepBtn");
+limparCepBtn.addEventListener("click", () => {
+  cepInput.value = "";
+  cepResult.innerHTML = "";
+});
+
+const limparCnpjBtn = document.getElementById("limparCnpjBtn");
+limparCnpjBtn.addEventListener("click", () => {
+  cnpjInput.value = "";
+  cnpjResult.innerHTML = "";
+});
+
+const limparIpBtn = document.getElementById("limparIpBtn");
+limparIpBtn.addEventListener("click", () => {
+  ipResult.innerHTML = "";
+});

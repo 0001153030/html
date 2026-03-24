@@ -409,11 +409,14 @@
                     <input
                         type="text"
                         id="cepInput"
-                        placeholder="Digite o CEP (somente números)"
-                        maxlength="8"
+                        placeholder="Digite o CEP (com ou sem máscara)"
+                        maxlength="10"
                     />
                     <button id="consultarCepBtn" class="btn-submit">
                         Consultar CEP
+                    </button>
+                    <button id="limparCepBtn" class="btn-reset">
+                        Limpar Resultados
                     </button>
                 </div>
                 <div id="cepResult" class="api-result-area"></div>
@@ -426,11 +429,14 @@
                     <input
                         type="text"
                         id="cnpjInput"
-                        placeholder="Digite o CNPJ (somente números)"
-                        maxlength="14"
+                        placeholder="Digite o CNPJ (com ou sem máscara)"
+                        maxlength="18"
                     />
                     <button id="consultarCnpjBtn" class="btn-submit">
                         Consultar CNPJ
+                    </button>
+                    <button id="limparCnpjBtn" class="btn-reset">
+                        Limpar Resultados
                     </button>
                 </div>
                 <div id="cnpjResult" class="api-result-area"></div>
@@ -448,6 +454,13 @@
                     style="margin-top: 15px"
                 >
                     Consultar IP
+                </button>
+                <button
+                    id="limparIpBtn"
+                    class="btn-reset"
+                    style="margin-top: 15px"
+                >
+                    Limpar Resultados
                 </button>
                 <div
                     id="ipResult"
