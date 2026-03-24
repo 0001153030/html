@@ -401,6 +401,60 @@
                     </div>
                 </form>
             </section>
+
+            <section id="consulta-cep" class="page-section">
+                <h2>Consulta de CEP (ViaCEP)</h2>
+                <div class="api-form-group">
+                    <label for="cepInput">CEP:</label>
+                    <input
+                        type="text"
+                        id="cepInput"
+                        placeholder="Digite o CEP (somente números)"
+                        maxlength="8"
+                    />
+                    <button id="consultarCepBtn" class="btn-submit">
+                        Consultar CEP
+                    </button>
+                </div>
+                <div id="cepResult" class="api-result-area"></div>
+            </section>
+
+            <section id="consulta-cnpj" class="page-section">
+                <h2>Consulta de CNPJ (BrasilAPI)</h2>
+                <div class="api-form-group">
+                    <label for="cnpjInput">CNPJ:</label>
+                    <input
+                        type="text"
+                        id="cnpjInput"
+                        placeholder="Digite o CNPJ (somente números)"
+                        maxlength="14"
+                    />
+                    <button id="consultarCnpjBtn" class="btn-submit">
+                        Consultar CNPJ
+                    </button>
+                </div>
+                <div id="cnpjResult" class="api-result-area"></div>
+            </section>
+
+            <section id="consulta-ip" class="page-section">
+                <h2>Consulta de Endereço por IP (ip-api)</h2>
+                <p>
+                    Clique no botão para exibir suas informações de localização
+                    baseadas no seu endereço IP.
+                </p>
+                <button
+                    id="consultarIpBtn"
+                    class="btn-submit"
+                    style="margin-top: 15px"
+                >
+                    Consultar IP
+                </button>
+                <div
+                    id="ipResult"
+                    class="api-result-area"
+                    style="margin-top: 20px"
+                ></div>
+            </section>
         </main>
 
         <footer>

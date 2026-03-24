@@ -355,9 +355,9 @@ body.dark-mode .cadastro-form textarea {
 
 .cadastro-form .radio-group label,
 .cadastro-form .checkbox-group label {
-    display: inline-flex; /* Use inline-flex to align text with radio/checkbox */
+    display: inline-flex;
     align-items: center;
-    margin-right: 0; /* Remove default margin as gap handles spacing */
+    margin-right: 0;
     font-weight: normal;
 }
 
@@ -369,7 +369,7 @@ body.dark-mode .cadastro-form textarea {
 }
 
 .btn-reset {
-    background-color: #f44336; /* Cor vermelha para o botão de reset */
+    background-color: #f44336;
     color: var(--white);
     padding: 15px;
     border: none;
@@ -381,7 +381,53 @@ body.dark-mode .cadastro-form textarea {
 }
 
 .btn-reset:hover {
-    background-color: #d32f2f; /* Tom mais escuro no hover */
+    background-color: #d32f2f;
     transform: translateY(-2px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for API Integration Sections */
+.api-form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.api-form-group label {
+    flex: 0 0 80px; /* Fixed width for labels */
+    margin-bottom: 0;
+}
+
+.api-form-group input[type="text"] {
+    flex: 1; /* Take remaining space */
+    max-width: 300px; /* Limit input width */
+    margin-bottom: 0;
+}
+
+.api-form-group .btn-submit {
+    margin-top: 0; /* Remove top margin */
+}
+
+.api-result-area {
+    background: var(--bg-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    transition: background-color var(--transition);
+}
+
+body.dark-mode .api-result-area {
+    background: #2a2a2a;
+    border: 1px solid #555;
+}
+
+.api-result-area p {
+    margin-bottom: 8px;
+}
+
+.api-result-area p:last-child {
+    margin-bottom: 0;
 }
